@@ -5,6 +5,10 @@ const useKeyEvent = () => {
 
   useEffect(() => {
     const listeningWindow = (e: any) => {
+      if (e.key === "Escape") {
+        setTypedValue([]);
+        return;
+      }
       setTypedValue((prevValue) => [...prevValue, e.key]);
     };
     window.addEventListener("keydown", listeningWindow);
@@ -13,6 +17,7 @@ const useKeyEvent = () => {
       window.removeEventListener("keydown", listeningWindow);
     };
   }, []);
+
   return typedValue;
 };
 

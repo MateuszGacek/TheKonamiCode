@@ -18,7 +18,7 @@ const useKeyEvent = () => {
     };
   }, []);
 
-  return typedValue;
+  return typedValue.join("");
 };
 
 export default useKeyEvent;

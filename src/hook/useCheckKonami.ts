@@ -14,9 +14,7 @@ const useCheckKonami = (
     if (konamiCode.includes(password) && konamiCode.length === password.length)
       setShowSecret(true);
 
-    return () => {
-      clearTimeout(timer);
-    };
+    return () => clearTimeout(timer);
   }, [konamiCode, password, delay]);
 
   return showSecret;

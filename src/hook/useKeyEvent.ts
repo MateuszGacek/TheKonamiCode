@@ -9,16 +9,16 @@ const useKeyEvent = (delay: number = 1) => {
     }, delay * 1000);
     const listeningWindow = (e: KeyboardEvent) => {
       // Depending on the password, I can make regex conditions
-      if (e.key === "Shift") {
-        return;
-      }
+
+      if (e.key === "Shift") return;
+
       if (e.key === "Escape") {
         setTypedValue([]);
         return;
       }
       setTypedValue((prevValue) => [...prevValue, e.key]);
     };
-    window.addEventListener<"keydown">("keydown", listeningWindow);
+    window.addEventListener("keydown", listeningWindow);
 
     return () => {
       window.removeEventListener("keydown", listeningWindow);

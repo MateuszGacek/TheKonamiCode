@@ -1,7 +1,7 @@
 import useKeyEvent from "../hook/useKeyEvent";
-import { password } from "../store/password";
 import useCheckKonami from "../hook/useCheckKonami";
 import SecretData from "./SecretData";
+import { password } from "../store/password";
 
 const Listening: React.FC = () => {
   const konamiCode = useKeyEvent(5);

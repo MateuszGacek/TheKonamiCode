@@ -1,5 +1,5 @@
-import Issues from "./Issues";
 import { useQuery } from "@tanstack/react-query";
+import Issues from "./Issues";
 
 const SecretData: React.FC = () => {
   // I'm not sure if I need to type this destructuring
@@ -16,13 +16,9 @@ const SecretData: React.FC = () => {
     queryKey: ["issues"],
   });
 
-  if (isLoading) {
-    return <h2>Loading...</h2>;
-  }
+  if (isLoading) <h2>Loading...</h2>;
 
-  if (error) {
-    return <div>Error: error fetching</div>;
-  }
+  if (error) <div>Error: error fetching</div>;
 
   return <Issues data={issues} />;
 };

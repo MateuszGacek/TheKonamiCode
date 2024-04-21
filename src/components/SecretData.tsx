@@ -1,7 +1,9 @@
 import Issues from "./Issues";
 import { useQuery } from "@tanstack/react-query";
 
-const SecretData = () => {
+const SecretData: React.FC = () => {
+  // I'm not sure if I need to type this destructuring
+  // And I have a problem with data typing and there is little information about types in the tanstack docs
   const {
     data: issues,
     isLoading,
@@ -11,7 +13,7 @@ const SecretData = () => {
       fetch("https://api.github.com/repos/elixir-lang/elixir/issues").then(
         (res) => res.json()
       ),
-    queryKey: ["comments"],
+    queryKey: ["issues"],
   });
 
   if (isLoading) {

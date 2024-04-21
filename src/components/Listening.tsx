@@ -5,7 +5,7 @@ import data from "../store/data.json";
 import Issues from "./Issues";
 
 const Listening: React.FC = () => {
-  const konamiCode = useKeyEvent();
+  const konamiCode = useKeyEvent(5);
   const isCorrect = useCheckKonami(konamiCode, password, 15);
 
   return (

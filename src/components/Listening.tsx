@@ -4,8 +4,8 @@ import SecretData from "./SecretData";
 import { password } from "../store/password";
 
 const Listening: React.FC = () => {
-  const konamiCode = useKeyEvent(2);
-  const isCorrect = useCheckKonami(konamiCode, password, 2);
+  const konamiCode = useKeyEvent(5);
+  const isCorrect = useCheckKonami(konamiCode, password, 15);
 
   return (
     <>

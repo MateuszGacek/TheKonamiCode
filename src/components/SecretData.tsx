@@ -16,9 +16,13 @@ const SecretData: React.FC = () => {
     queryKey: ["issues"],
   });
 
-  if (isLoading) <h2>Loading...</h2>;
+  if (isLoading) {
+    return <h2>Loading...</h2>;
+  }
 
-  if (error) <div>Error: error fetching</div>;
+  if (error) {
+    return <div>Error: error fetching</div>;
+  }
 
   return <Issues data={issues} />;
 };

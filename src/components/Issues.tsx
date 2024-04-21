@@ -5,7 +5,7 @@ const Issues: React.FC<any> = ({ data }) => {
 
   return (
     <>
-      {issuesList.map((issue: { id: string; user: any; title: string }) => (
+      {issuesList.map((issue: any) => (
         <div key={issue.id}>
           <p>{issue.user.login}</p>
           <p>{issue.title}</p>

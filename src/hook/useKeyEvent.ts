@@ -5,6 +5,10 @@ const useKeyEvent = () => {
 
   useEffect(() => {
     const listeningWindow = (e: any) => {
+      // Depending on the password, I can make regex conditions
+      if (e.key === "Shift") {
+        return;
+      }
       if (e.key === "Escape") {
         setTypedValue([]);
         return;

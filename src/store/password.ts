@@ -1,1 +1,1 @@
-export const password: string = "yes";
+export const password: string = "injects3crets";
